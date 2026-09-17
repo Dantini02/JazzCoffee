@@ -42,31 +42,6 @@ arrastrándolo a una pestaña) para ver su estructura de etiquetas
 `<descripcion>`, `<precio>`). En `index.html`, la sección **"Ver
 catálogo"** del menú también enlaza directamente al archivo.
 
-## Publicar en GitHub Pages
-
-1. Crea un repositorio nuevo en GitHub (por ejemplo `jazzcoffe`).
-2. Sube estos archivos manteniendo la misma estructura de carpetas:
-   ```bash
-   cd jazzcoffe
-   git init
-   git add .
-   git commit -m "Primera versión del sitio JazzCoffe"
-   git branch -M main
-   git remote add origin https://github.com/TU-USUARIO/jazzcoffe.git
-   git push -u origin main
-   ```
-3. En GitHub, entra a tu repositorio → **Settings** → **Pages**.
-4. En **"Build and deployment"**, selecciona **Source: Deploy from a
-   branch**.
-5. En **Branch**, elige `main` y la carpeta `/ (root)`. Guarda.
-6. Espera uno o dos minutos y GitHub mostrará la URL pública, algo como:
-   ```
-   https://TU-USUARIO.github.io/jazzcoffe/
-   ```
-7. Visita esa URL: ahí el `fetch()` de `datos.xml` funcionará sin
-   problema, porque GitHub Pages sirve el sitio por HTTPS (no por
-   `file://`).
-
 ## Checklist de requisitos cubiertos
 
 - [x] `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`, `<footer>` semánticos
