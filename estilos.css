@@ -1,0 +1,359 @@
+/* ============================================================
+   estilos.css — JazzCoffe
+   Demuestra: selectores (elemento, clase, id, descendiente,
+   pseudo-clase), modelo de caja (margin/border/padding/box-sizing)
+   y layout con Flexbox y Grid.
+   ============================================================ */
+
+/* --- Variables de diseño: paleta "club de jazz nocturno" --- */
+:root {
+  --bg-dark: #1b1712;
+  --bg-panel: #241e17;
+  --bg-panel-2: #2c241b;
+  --brass: #c9973b;
+  --brass-light: #e0b662;
+  --burgundy: #7a2e2e;
+  --text-light: #f3ead9;
+  --text-muted: #c9bfa9;
+  --border-hairline: rgba(201, 151, 59, 0.35);
+}
+
+/* --- Reset básico + modelo de caja global ---
+   box-sizing: border-box asegura que padding y border se
+   incluyan dentro del width/height declarado (modelo de caja). */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Selector de ELEMENTO: body */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: "Work Sans", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Selectores de ELEMENTO para tipografía de encabezados */
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+h1 { font-size: 3rem; letter-spacing: 0.5px; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+
+p { color: var(--text-muted); margin-bottom: 0.75rem; }
+
+/* Selector de ELEMENTO: enlaces, con pseudo-clase :hover */
+a {
+  color: var(--brass-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============ HEADER Y NAVEGACIÓN (Flexbox) ============ */
+header.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;       /* padding: parte del modelo de caja */
+  border-bottom: 3px solid var(--brass); /* border: parte del modelo de caja */
+  background-color: var(--bg-panel);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Selector de ID: identifica un único elemento */
+#logo {
+  font-family: "Fraunces", serif;
+  font-size: 1.6rem;
+  color: var(--brass-light);
+}
+#logo span {
+  color: var(--burgundy);
+}
+
+/* Selector de CLASE */
+.nav-list {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+/* Selector DESCENDIENTE: solo los <a> dentro de .nav-list */
+.nav-list a {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  padding: 0.25rem 0.1rem;
+  border-bottom: 2px solid transparent; /* border reservado para hover */
+}
+
+/* Selector descendiente + pseudo-clase combinados */
+.nav-list a:hover {
+  border-bottom: 2px solid var(--brass);
+  text-decoration: none;
+}
+
+/* ============ SECCIONES GENERALES ============ */
+main section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto; /* margin centra el contenedor */
+}
+
+/* Selector de ID para dar tratamiento especial a la sección de inicio */
+#inicio {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+
+.hero-texto { flex: 1 1 50%; }
+.hero-imagen { flex: 1 1 50%; }
+
+.eyebrow {
+  color: var(--brass);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-highlights {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Selector descendiente: solo los li dentro de .hero-highlights */
+.hero-highlights li {
+  border-left: 3px solid var(--brass); /* border */
+  padding-left: 0.8rem;                /* padding */
+  color: var(--text-muted);
+}
+
+/* Botón reutilizable (clase) */
+.btn {
+  display: inline-block;
+  background-color: var(--brass);
+  color: var(--bg-dark);
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;   /* padding */
+  border: 2px solid var(--brass); /* border */
+  width: auto;
+  margin-top: 1rem;          /* margin */
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Pseudo-clase :hover sobre una clase */
+.btn:hover {
+  background-color: transparent;
+  color: var(--brass-light);
+}
+
+/* ============ SECCIÓN NOSOTROS ============ */
+#nosotros {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--bg-panel);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+#nosotros figure { flex: 1 1 40%; }
+#nosotros .texto { flex: 1 1 60%; }
+#nosotros figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ============ MENÚ (CSS Grid) ============ */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Selector de CLASE con modelo de caja completo:
+   width, padding, border, margin visibles en cada tarjeta */
+.menu-card {
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--border-hairline);
+  margin-bottom: 0.5rem;
+  background-color: var(--bg-panel-2);
+}
+
+.menu-card .precio {
+  color: var(--brass-light);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.pasos {
+  margin-top: 2rem;
+  padding-left: 1.4rem;
+  color: var(--text-muted);
+}
+.pasos li { margin-bottom: 0.4rem; }
+
+/* ============ TABLAS (horario y catálogo) ============ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.8rem 1rem;      /* padding */
+  border-bottom: 1px solid var(--border-hairline); /* border */
+}
+
+thead th {
+  background-color: var(--bg-panel-2);
+  color: var(--brass-light);
+  text-transform: none;
+}
+
+/* Pseudo-clase estructural: filas pares de la tabla */
+tbody tr:nth-child(even) {
+  background-color: rgba(201, 151, 59, 0.05);
+}
+
+/* Pseudo-clase :hover sobre filas de tabla */
+tbody tr:hover {
+  background-color: rgba(201, 151, 59, 0.12);
+}
+
+/* ============ CATÁLOGO (XML) ============ */
+#catalogo .nota {
+  font-size: 0.9rem;
+  border: 1px dashed var(--border-hairline);
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+}
+
+/* ============ UBICACIÓN / MAPA EMBEBIDO ============ */
+.mapa-contenedor {
+  border: 3px solid var(--brass);
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+.mapa-contenedor iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
+
+/* ============ CONTACTO / FORMULARIO ============ */
+#contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  background-color: var(--bg-panel);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.form-grupo {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grupo label {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Selector descendiente: inputs/select/textarea dentro del formulario */
+#form-contacto input,
+#form-contacto select,
+#form-contacto textarea {
+  background-color: var(--bg-panel-2);
+  color: var(--text-light);
+  border: 1px solid var(--border-hairline); /* border */
+  padding: 0.7rem 0.9rem;                   /* padding */
+  width: 100%;                              /* width del modelo de caja */
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Pseudo-clase :focus para accesibilidad de teclado */
+#form-contacto input:focus,
+#form-contacto select:focus,
+#form-contacto textarea:focus {
+  outline: none;
+  border-color: var(--brass);
+}
+
+/* Pseudo-clase :invalid para reforzar la validación HTML5 */
+#form-contacto input:invalid:not(:placeholder-shown) {
+  border-color: var(--burgundy);
+}
+
+#form-contacto textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.info-contacto {
+  border-left: 3px solid var(--brass);
+  padding-left: 2rem;
+}
+
+/* ============ FOOTER ============ */
+footer.site-footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 3px solid var(--brass);
+  background-color: var(--bg-panel);
+  color: var(--text-muted);
+}
+
+footer.site-footer .redes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ============ RESPONSIVE: apila el layout en pantallas chicas ============ */
+@media (max-width: 720px) {
+  #inicio,
+  #nosotros,
+  #contacto {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  h1 { font-size: 2.2rem; }
+}

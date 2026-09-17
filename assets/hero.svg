@@ -1,0 +1,36 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Taza de café con disco de vinilo</title>
+  <desc id="d2">Ilustración decorativa de una taza de café humeante sobre un disco de vinilo, con notas musicales alrededor.</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3A2E1E"/>
+      <stop offset="100%" stop-color="#1B1712"/>
+    </radialGradient>
+  </defs>
+  <circle cx="250" cy="250" r="240" fill="url(#glow)"/>
+
+  <!-- Disco de vinilo -->
+  <circle cx="250" cy="300" r="150" fill="#111" stroke="#C9973B" stroke-width="3"/>
+  <circle cx="250" cy="300" r="120" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+  <circle cx="250" cy="300" r="95" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+  <circle cx="250" cy="300" r="70" fill="none" stroke="#2A2A2A" stroke-width="2"/>
+  <circle cx="250" cy="300" r="40" fill="#7A2E2E"/>
+  <circle cx="250" cy="300" r="6" fill="#EDE3CF"/>
+
+  <!-- Taza -->
+  <path d="M170 220 h140 v55 a70 55 0 0 1 -140 0 z" fill="#EDE3CF"/>
+  <path d="M310 235 h20 a22 22 0 0 1 0 44 h-16" fill="none" stroke="#EDE3CF" stroke-width="10"/>
+  <ellipse cx="240" cy="220" rx="70" ry="12" fill="#C9973B"/>
+
+  <!-- Vapor -->
+  <path d="M210 190 q-10 -25 5 -45 q12 20 0 40" fill="none" stroke="#EDE3CF" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <path d="M245 185 q-10 -25 5 -45 q12 20 0 40" fill="none" stroke="#EDE3CF" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <path d="M280 190 q-10 -25 5 -45 q12 20 0 40" fill="none" stroke="#EDE3CF" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Notas musicales -->
+  <g fill="#C9973B" font-family="serif">
+    <text x="90" y="120" font-size="34">♪</text>
+    <text x="360" y="100" font-size="28">♫</text>
+    <text x="400" y="180" font-size="24">♪</text>
+  </g>
+</svg>

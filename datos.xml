@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  datos.xml
+  Catálogo de servicios y experiencias de JazzCoffe.
+  Este archivo se consume desde index.html mediante JavaScript (fetch)
+  para pintar dinámicamente la sección "Catálogo", y también puede
+  abrirse directamente en el navegador para ver su estructura XML.
+-->
+<catalogo>
+  <servicio id="s1">
+    <nombre>Noches de Jazz en Vivo</nombre>
+    <categoria>Entretenimiento</categoria>
+    <descripcion>Trío de jazz en vivo todos los jueves y sábados desde las 8:00 pm.</descripcion>
+    <precio moneda="MXN">Entrada libre</precio>
+  </servicio>
+
+  <servicio id="s2">
+    <nombre>Barra de Café de Especialidad</nombre>
+    <categoria>Bebidas</categoria>
+    <descripcion>Café de origen único preparado por método de filtrado, prensa francesa o espresso.</descripcion>
+    <precio moneda="MXN">45.00</precio>
+  </servicio>
+
+  <servicio id="s3">
+    <nombre>Cata de Café Guiada</nombre>
+    <categoria>Experiencias</categoria>
+    <descripcion>Sesión de cata con un barista certificado, tres orígenes distintos, cada sábado a las 5:00 pm.</descripcion>
+    <precio moneda="MXN">180.00</precio>
+  </servicio>
+
+  <servicio id="s4">
+    <nombre>Renta del Salón para Eventos</nombre>
+    <categoria>Eventos</categoria>
+    <descripcion>Espacio disponible para presentaciones acústicas, cumpleaños y reuniones privadas.</descripcion>
+    <precio moneda="MXN">1500.00</precio>
+  </servicio>
+
+  <servicio id="s5">
+    <nombre>Clases de Latte Art</nombre>
+    <categoria>Talleres</categoria>
+    <descripcion>Taller introductorio de arte latte, incluye materiales y un café de cortesía.</descripcion>
+    <precio moneda="MXN">250.00</precio>
+  </servicio>
+</catalogo>

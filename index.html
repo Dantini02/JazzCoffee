@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--
+  JazzCoffe — mini-web informativa
+  Proyecto estudiantil para la Unidad 2 (HTML, XML, CSS)
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JazzCoffe · Café de especialidad y jazz en vivo</title>
+
+  <!-- Tipografías externas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER + NAVEGACIÓN ===================== -->
+  <header class="site-header">
+    <div id="logo">Jazz<span>Coffe</span></div>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#horario">Horario</a></li>
+        <li><a href="#catalogo">Ver catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== INICIO / HERO ===================== -->
+    <section id="inicio">
+      <div class="hero-texto">
+        <p class="eyebrow">Café de especialidad · Música en vivo</p>
+        <h1>JazzCoffe</h1>
+        <p>
+          Un rincón cálido donde el aroma del café recién molido se mezcla
+          con el sonido de un trío de jazz en vivo. Ven a leer, trabajar o
+          simplemente escuchar.
+        </p>
+        <ul class="hero-highlights">
+          <li>Café de origen único, tostado en pequeños lotes</li>
+          <li>Jazz en vivo los jueves y sábados</li>
+          <li>Ambiente cálido, ideal para trabajar o conversar</li>
+        </ul>
+        <a class="btn" href="#contacto">Reserva tu mesa</a>
+      </div>
+      <div class="hero-imagen">
+        <img src="assets/hero.svg" alt="Ilustración de una taza de café humeante sobre un disco de vinilo">
+      </div>
+    </section>
+
+    <!-- ===================== NOSOTROS ===================== -->
+    <section id="nosotros">
+      <figure>
+        <img src="assets/interior.svg" alt="Ilustración del interior de JazzCoffe, con mesas redondas y un pequeño escenario">
+        <figcaption>El escenario de JazzCoffe, listo para la próxima sesión</figcaption>
+      </figure>
+      <div class="texto">
+        <h2>Nuestra historia</h2>
+        <p>
+          JazzCoffe nació en 2019 como un proyecto pequeño: una cafetera de
+          prensa francesa y un tocadiscos en la sala de un departamento.
+          Hoy somos un punto de encuentro para amantes del buen café y del
+          jazz en Ciudad Juárez.
+        </p>
+        <p>
+          Cada taza se prepara a mano, grano por grano, con el mismo
+          cuidado con el que afinamos un instrumento antes de tocar.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== MENÚ ===================== -->
+    <section id="menu">
+      <h2>Nuestro menú</h2>
+
+      <!-- Tabla: elemento requerido -->
+      <table>
+        <caption class="visually-hidden">Bebidas y precios de JazzCoffe</caption>
+        <thead>
+          <tr>
+            <th scope="col">Bebida</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Espresso doble</td>
+            <td>Extracción intensa, ideal para empezar la noche</td>
+            <td>$38</td>
+          </tr>
+          <tr>
+            <td>Cold Brew</td>
+            <td>Infusión en frío durante 16 horas</td>
+            <td>$52</td>
+          </tr>
+          <tr>
+            <td>Café de olla</td>
+            <td>Receta tradicional con piloncillo y canela</td>
+            <td>$45</td>
+          </tr>
+          <tr>
+            <td>Latte de vainilla</td>
+            <td>Espresso, leche vaporizada y vainilla natural</td>
+            <td>$55</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <h3>Especial de la casa</h3>
+          <p>Mezcla de la casa con notas de chocolate y cereza.</p>
+          <p class="precio">$48 MXN</p>
+        </div>
+        <div class="menu-card">
+          <h3>Postre en turno</h3>
+          <p>Pay de nuez recién horneado, acompaña cualquier café.</p>
+          <p class="precio">$40 MXN</p>
+        </div>
+        <div class="menu-card">
+          <h3>Combo Jazz Night</h3>
+          <p>Bebida + postre, válido las noches de música en vivo.</p>
+          <p class="precio">$75 MXN</p>
+        </div>
+      </div>
+
+      <!-- Lista ordenada: variación adicional de lista -->
+      <h3>¿Cómo pedir?</h3>
+      <ol class="pasos">
+        <li>Elige tu bebida en la barra o pídela en mesa.</li>
+        <li>Indica si la prefieres caliente o fría.</li>
+        <li>Recoge tu pedido cuando escuches tu nombre.</li>
+      </ol>
+    </section>
+
+    <!-- ===================== HORARIO ===================== -->
+    <section id="horario">
+      <h2>Horario</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Día</th>
+            <th scope="col">Horario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Lunes a miércoles</td><td>8:00 am – 9:00 pm</td></tr>
+          <tr><td>Jueves y sábado (jazz en vivo)</td><td>8:00 am – 12:00 am</td></tr>
+          <tr><td>Viernes</td><td>8:00 am – 11:00 pm</td></tr>
+          <tr><td>Domingo</td><td>9:00 am – 6:00 pm</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===================== CATÁLOGO (desde XML) ===================== -->
+    <section id="catalogo">
+      <h2>Catálogo de servicios</h2>
+      <p class="nota">
+        Esta tabla se genera dinámicamente a partir del archivo
+        <code>datos.xml</code> mediante JavaScript (<code>fetch</code> +
+        <code>DOMParser</code>). También puedes
+        <a href="datos.xml" target="_blank" rel="noopener">abrir datos.xml directamente</a>
+        para ver su estructura.
+      </p>
+
+      <table id="tabla-catalogo">
+        <thead>
+          <tr>
+            <th scope="col">Servicio</th>
+            <th scope="col">Categoría</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody id="catalogo-body">
+          <!-- Filas insertadas por JavaScript desde datos.xml -->
+          <tr><td colspan="4">Cargando catálogo…</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===================== UBICACIÓN (objeto embebido: mapa) ===================== -->
+    <section id="ubicacion">
+      <h2>Encuéntranos</h2>
+      <p>Av. Lerdo, Centro, Ciudad Juárez, Chihuahua.</p>
+      <div class="mapa-contenedor">
+        <iframe
+          title="Mapa de ubicación de JazzCoffe"
+          src="https://www.google.com/maps?q=Ciudad%20Juarez%20Centro&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO / FORMULARIO ===================== -->
+    <section id="contacto">
+      <div>
+        <h2>Contáctanos</h2>
+        <form id="form-contacto" action="#" method="post" novalidate>
+
+          <div class="form-grupo">
+            <label for="nombre">Nombre completo *</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+              minlength="2">
+          </div>
+
+          <div class="form-grupo">
+            <label for="correo">Correo electrónico *</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="tucorreo@ejemplo.com"
+              required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="656 123 4567"
+              pattern="[0-9]{3}[- ]?[0-9]{3}[- ]?[0-9]{4}">
+          </div>
+
+          <div class="form-grupo">
+            <label for="asunto">Asunto *</label>
+            <select id="asunto" name="asunto" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="reservacion">Reservación</option>
+              <option value="evento">Renta para evento</option>
+              <option value="general">Duda general</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label for="mensaje">Mensaje *</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Cuéntanos en qué te podemos ayudar"
+              required
+              minlength="10"></textarea>
+          </div>
+
+          <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <div class="info-contacto">
+        <h3>Visítanos</h3>
+        <p>Av. Ficticia 123, Centro, Ciudad Juárez, Chihuahua.</p>
+        <p>Tel: 656 123 4567</p>
+        <p>hola@jazzcoffe.example</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <ul class="redes">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">TikTok</a></li>
+    </ul>
+    <p>© 2025 JazzCoffe. Proyecto estudiantil.</p>
+  </footer>
+
+  <!-- ===================== JS: cargar y mostrar datos.xml ===================== -->
+  <script>
+    // Carga datos.xml, lo parsea como XML y pinta las filas de la tabla #catalogo-body.
+    // Requiere servir el sitio por http(s) (GitHub Pages funciona perfecto);
+    // abrir index.html con doble clic (file://) puede bloquear el fetch por CORS.
+    async function cargarCatalogo() {
+      const cuerpoTabla = document.getElementById('catalogo-body');
+      try {
+        const respuesta = await fetch('datos.xml');
+        const textoXml = await respuesta.text();
+        const xml = new DOMParser().parseFromString(textoXml, 'application/xml');
+
+        const servicios = xml.querySelectorAll('servicio');
+        cuerpoTabla.innerHTML = ''; // limpia el "Cargando…"
+
+        servicios.forEach(servicio => {
+          const nombre = servicio.querySelector('nombre').textContent;
+          const categoria = servicio.querySelector('categoria').textContent;
+          const descripcion = servicio.querySelector('descripcion').textContent;
+          const precio = servicio.querySelector('precio').textContent;
+
+          const fila = document.createElement('tr');
+          fila.innerHTML = `
+            <td>${nombre}</td>
+            <td>${categoria}</td>
+            <td>${descripcion}</td>
+            <td>${precio === 'Entrada libre' ? precio : '$' + precio + ' MXN'}</td>
+          `;
+          cuerpoTabla.appendChild(fila);
+        });
+      } catch (error) {
+        cuerpoTabla.innerHTML = `<tr><td colspan="4">No se pudo cargar datos.xml. Si abriste el archivo con doble clic, prueba con un servidor local o visita la página publicada.</td></tr>`;
+        console.error('Error al cargar datos.xml:', error);
+      }
+    }
+
+    cargarCatalogo();
+  </script>
+
+</body>
+</html>
